@@ -1,0 +1,157 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    background: linear-gradient(135deg, #FFDEE9, #B5FFFC);
+    color: #333;
+    padding: 2em;
+}
+
+.hero-section h1 {
+    font-size: 6vw;
+    margin-bottom: 0.5em;
+}
+
+.hero-section span {
+    color: #FF6F61;
+}
+
+.hero-section .btn {
+    background: #6A0572;
+    color: white;
+    padding: 0.8em 1.2em;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.hero-section .btn:hover {
+    background: #FF6F61;
+    transform: scale(1.1);
+}
+
+/* About Section */
+.about-section {
+    padding: 2em;
+    text-align: center;
+    background: #FFF1E6;
+    color: #333;
+}
+
+.about-section h2 {
+    font-size: 2em;
+    color: #FF6F61;
+}
+
+/* Projects Section */
+.projects-section {
+    padding: 2em;
+    background: #E7FFFA;
+    color: #333;
+}
+
+.projects-section h2 {
+    text-align: center;
+    font-size: 2em;
+    color: #6A0572;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5em;
+}
+
+.project-card {
+    background: white;
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.project-card h3 {
+    color: #FF6F61;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 2em;
+    background: #EAE2F8;
+    color: #333;
+}
+
+.contact-section h2 {
+    text-align: center;
+    font-size: 2em;
+    color: #6A0572;
+}
+
+.contact-section form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-section input, .contact-section textarea {
+    margin: 0.5em 0;
+    padding: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.contact-section button {
+    background: #6A0572;
+    color: white;
+    padding: 0.8em 1.2em;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.contact-section button:hover {
+    background: #FF6F61;
+    transform: scale(1.1);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    background: #B5FFFC;
+    color: #333;
+    padding: 1em 0;
+    margin-top: auto;
+}
