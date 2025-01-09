@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Bungee+Shade&family=Iceland&family=Montserrat:wght@100..900&family=Orbitron:wght@400..900&family=Playfair+Display:wght@400..900&family=Vast+Shadow&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Bungee+Shade&family=Varela+Round&display=swap&family=Iceland&family=Montserrat:wght@100..900&family=Orbitron:wght@400..900&family=Playfair+Display:wght@400..900&family=Vast+Shadow&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         *{
@@ -219,39 +219,45 @@
         }
         /* Projects Section */
 
-            #projectSection h2 {
-                font-family: 'Vast Shadow', sans-serif;
-                font-size: 36px;
-                color: #00d4ff;
-                margin-bottom: 40px;
-            }
-            #projectSection .project-cards {
-                display: flex;
-                justify-content: center;
-                gap: 20px;
-                flex-wrap: wrap;
-            }
-            #projectSection .project-card {
-                background-color: #D39D55;
-                padding: 20px;
-                width: 300px;
-                height: 200px;
-                text-align: center;
-                border-radius: 10px;
-                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-                transition: transform 0.5s ease, box-shadow 0.3s ease;
-            }
-            #projectSection .project-card:hover {
-                transform: translateY(-10px);
-                color: #23ad13;
-                background-color: #F5EFFF;
-                box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.1);
-            }
-            #projectSection .project-card h3 {
-                font-size: 24px;
-                margin-bottom: 10px;
-            }
+        #projectSection h2 {
+            font-family: 'Vast Shadow', sans-serif;
+            font-size: 36px;
+            color: #00d4ff;
+            margin-bottom: 40px;
+        }
+        #projectSection .project-cards {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        #projectSection .project-card {
+            background-color: #D39D55;
+            padding: 20px;
+            width: 300px;
+            height: 200px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.5s ease, box-shadow 0.3s ease;
+        }
+        #projectSection .project-card:hover {
+            transform: translateY(-10px);
+            color: #23ad13;
+            background-color: #F5EFFF;
+            box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        #projectSection .project-card h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
 
+        .con-5 {
+            padding-top: 75px;
+        }
+        .contact-section h2{
+            text-shadow: none;
+        }
         .con-6 {
             color: #fff;
             padding: 20px;
@@ -262,28 +268,19 @@
             display: flex;
             flex-direction: column;
             flex-wrap: nowrap;
-            
         }
         /* Contact Section */
         .contact-section {
-            /* max-width: 700px;
-            display: flex;
-            flex-direction: column;
-            flex-wrap: nowrap;
-            text-align: center;
-            background-color:#ffffff;
-            color: #02022a;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 25px;
-            box-shadow: 0px 0px 15px rgba(77, 178, 209, 0.7); */
+            background-image: url(top-view-blue-monday-concept-composition-with-telephone.jpg);
+            background-repeat: no-repeat;
             width: 100%;
-            max-width: 500px;
+            max-width: 700px;
             margin: 0 auto;
             padding: 20px;
             background-color: #f9f9f9;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0,0, 0, 0.1);
+            margin-bottom: 30px;
         }
         .contact-section h2 {
             font-family: 'Vast Shadow', sans-serif;
@@ -294,6 +291,8 @@
         }
         .contact-section .details {
             font-size: 18px;
+            color: #02022a;
+            text-align: center;
             line-height: 2;
             margin-bottom: 15px;
         }
@@ -386,11 +385,6 @@
         .padd {
             padding-top: 75px;
         }
-        #contact-form{
-            display: flex;
-            flex-direction: row;
-            color: #02022a;
-        }
         #contact-form p{
             color: #02022a;
         }
@@ -399,6 +393,17 @@
             font-size: 16px;
             color: #333;
             margin-bottom: 5px;
+            text-align: left;
+            font-size: 20px;
+        }
+        #contact-form textarea {
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         #contact-form input,#contact-container textarea {
             width: 100%;
@@ -410,21 +415,48 @@
         #contact-form input:focus,#contact-form textarea:focus {
             border-color: #007bff;
             outline: none;
+            transition: 0.5s;
         }
         #contact-form button {
-            width: 100%;
+            font-family: "Varela Round",serif;
+            width: 50%;
             padding: 12px;
-            font-size: 18px;
+            font-size: 25px;
             color: white;
             background-color: #007b;
             border: none;
             border-radius: 4px;
             cursor: pointer;
-            animation: name duration timing-function delay iteration-count direction fill-mode;
+            transition: transform 0.5s,background-color 0.5s,backdrop-filter 0.5s,box-shadow 0.7s;
         }
         #contact-form button:hover {
-            background-color: #ffcc01;
+            background-color: #ff01b3;
+            transform: scaleX(1.05);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 10px #02022a; /* Adds a glowing pink shadow */
+        }
+        .popup-image {
+            position: absolute;
+            width: 500px;
+            height: 300px;
+            visibility: hidden;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow:  0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.5s ease-in-out;
+        }
+        .popup-image:hover{
             transform: scale(1.05);
+        }
+        .popup-image img {
+            width: 100%;
+            height: 100%;
+            background-color: #0073b1;
+            justify-content: center;
+            align-items: center;
+        }
+        .project-card:hover .popup-image{
+            visibility: visible;
         }
     </style>
 </head>
@@ -508,51 +540,121 @@
             </div>
             <div class="con-4 padd top" id="projectSection">
                 <h2>PROJECTS</h2>
-                    <div class="project-cards">
-                        <div class="project-card">
-                            <h3>Retail Billing Application</h3>
-                            <p class="text">A desktop application built using Python and Tkinter to manage retail billing with features like product search, billing, and database integration.</p>
-                            <a href="#">View Project</a>
+                <div class="project-cards">
+                    <div class="project-card">
+                        <div class="popup-image">
+                            <img src="projectHover-1.png" alt="">
                         </div>
-                        <div class="project-card">
-                            <h3>Web Development Portfolio</h3>
-                            <p class="text">My personal portfolio website built with HTML, CSS, and JavaScript to showcase my web development projects and skills.</p>
-                            <a href="#">View Project</a>
+                        <div id="project-container"></div>
+                        <h3>Retail Billing Application</h3>
+                        <p class="text">A desktop application built using Python and Tkinter to manage retail billing with features like product search, billing, and database integration.</p>
+                        <a href="#">View Project</a>
+                    </div>
+                    <div class="project-card">
+                        <div class="popup-image">
+                            <img src="projectHover-1.png" alt="">
                         </div>
-                        <div class="project-card">
+                        <h3>Web Development Portfolio</h3>
+                        <p class="text">My personal portfolio website built with HTML, CSS, and JavaScript to showcase my web development projects and skills.</p>
+                        <a href="#">View Project</a>
+                    </div>
+                    <div class="project-card">
+                        <div class="popup-image">
+                            <img src="projectHover-1.png" alt="">
+                        </div>
+                        <div>
                             <h3>Custom Billing System</h3>
                             <p class="text">A web-based billing system using Python (Flask), HTML, CSS, and MySQL to generate invoices and manage client data.</p>
                             <a href="#">View Project</a>
                         </div>
                     </div>
+                    <!-- script to display -->
+                    <!-- <script> 
+                        let projectCardDiv = document.createElement('div');
+                        projectCardDiv.innerHTML = "<div>Retail Billing App</div>";
+                        projectCardDiv.style.width = "100%";
+                        projectCardDiv.style.color = "black";
+                        projectCardDiv.style.padding = "10px";
+                        projectCardDiv.style.border = "1px solid #ccc";
+                        projectCardDiv.style.borderRadius = "5px";
+                        projectCardDiv.style.transition = "background-color 0.3s, color 0.3s";
+                        function displayHover(event) {
+                                if (event.type === "mouseover") {
+                                    projectCardDiv.style.backgroundColor = "#f0f0f0";
+                                    projectCardDiv.style.color = "#007BFF";
+                                } else if (event.type === "mouseout") {
+                                    projectCardDiv.style.backgroundColor = "";
+                                    projectCardDiv.style.color = "black";
+                                }
+                        }
+                        projectCardDiv.addEventListener("mouseover",displayHover);
+                                projectCardDiv.addEventListener("mouseout",displayHover);
+                                document.getElementById('project-container').appendChild(projectCardDiv);
+                    </script> -->
+                </div>
             </div>
-            <div class="con-5 contact-section top" id="contact">
-                <h2>CONTACT ME</h2>
-                <div class="details">
-                    <p>If you have any questions or would like to get in touch with me, feel free to reach out!</p>
-                    <!-- <p>Email: <a href="mailto:pavithranmurugan.official@gmail.com">pavithranmurugan.official@gmail.com</a></p>
-                    <p>Phone: <a href="tel:+91 7904536593">+91 7904536593</a></p>
-                    <p>LinkedIn: <a href="https://www.linkedin.com/in/pavithranmurugan" target="_blank">linkedin.com/in/pavithranmurugan-in</a></p> -->
-                    <div id="contact-form">
-                        <label for="name">Name :</label>
-                        <input type="text" name="" id="">
+            <div class="con-5" id="contact">
+                <div class="contact-section top">
+                    <h2>CONTACT ME</h2>
+                    <div class="details">
+                        <p>If you have any questions or would like to get in touch with me, feel free to reach out!</p>
+                        <!-- <p>Email: <a href="mailto:pavithranmurugan.official@gmail.com">pavithranmurugan.official@gmail.com</a></p>
+                        <p>Phone: <a href="tel:+91 7904536593">+91 7904536593</a></p>
+                        <p>LinkedIn: <a href="https://www.linkedin.com/in/pavithranmurugan" target="_blank">linkedin.com/in/pavithranmurugan-in</a></p> -->
+                        <div id="contact-form">
+                            <label for="name">Name</label>
+                            <input type="text" name="" id="name">
+                        </div>
+                        <div id="contact-form">
+                            <label for="mobile">Mobile</label>
+                            <input type="text" name="mobile" id="mobile">
+                        </div>
+                        <div id="contact-form">
+                            <label for="Email">Email</label>
+                            <input type="text" name="email" id="email">
+                        </div>
+                        <div id="contact-form">
+                            <label for="message">Message</label>
+                            <textarea name="message" id="message" placeholder="Your Message" required></textarea>
+                        </div>
+                        <div id="contact-form">
+                            <button type="submit" id="button" onclick="popup_message()">Submit</button>
+                            <script>
+                                function popup_message(){
+                                    let name = document.getElementById("name").value
+                                    let email = document.getElementById("email").value
+                                    let mobile = document.getElementById("mobile").value
+                                    if (name.trim() && email.trim() && mobile.trim()) {
+                                        let popup = document.createElement('div')
+
+                                        popup.innerHTML = `<p>Name : ${name}</p>
+                                                        <p>Mobile : ${mobile}</p>
+                                                        <p>Email : ${email}</p>`;
+                                        
+                                        popup.style.position = "fixed";
+                                        popup.style.width = "300px"
+                                        popup.style.color = "black"
+                                        popup.style.top = "50%";
+                                        popup.style.left = "50%";
+                                        popup.style.transform = "translate(-50%,-50%)";
+                                        popup.style.backgroundColor = "#fff";
+                                        popup.style.padding = "20px";
+                                        popup.style.boxShadow = "0 4px 8px rgba(0,0,0,0.2)";
+                                        popup.style.borderRadius = "8px";
+                                        popup.style.zIndex = "1000"
+                                        document.body.appendChild(popup);
+                                        
+                                        setTimeout(()=>{
+                                            document.body.removeChild(popup);
+                                        },3000);
+                                    }else{
+                                        alert("Please fill in all the fields")
+                                    }
+                                }
+                            </script>
+                        </div>
+                
                     </div>
-                    <div id="contact-form">
-                        <label for="mobile">Mobile :</label>
-                        <input type="text" name="" id="">
-                    </div>
-                    <div id="contact-form">
-                        <label for="Email">Email :</label>
-                        <input type="text" name="" id="">
-                    </div>
-                    <div id="contact-form">
-                        <label for="message">Message :</label>
-                        <textarea name="message" id="message" placeholder="Your Message" required></textarea>
-                    </div>
-                    <div id="contact-form">
-                        <button type="submit">Submit</button>
-                    </div>
-            
                 </div>
             </div>
             <hr class="horizontal">
