@@ -3,62 +3,731 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Pavithran Murugan's Full Stack Developer Portfolio showcasing projects in Python, HTML, CSS, and JavaScript.">
-    <meta property="og:title" content="Pavithran Murugan Portfolio">
-    <meta property="og:description" content="Full Stack Developer | Problem Solver | Creative Coder">
-    <meta property="og:image" content="path/to/your-image.jpg">
-    <meta property="og:url" content="https://www.your-portfolio.com">
-    <title>Pavithran Murugan Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Bungee+Shade&family=Varela+Round&display=swap&family=Iceland&family=Montserrat:wght@100..900&family=Orbitron:wght@400..900&family=Playfair+Display:wght@400..900&family=Vast+Shadow&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing:border-box;
+            justify-content: center;
+            align-items: center;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+        html, body {
+            width: 100%;
+            max-width: 1980px;
+            height: 100%;  /* Ensures the full height is covered */
+            margin: 0;     /* Removes any default margin */
+            padding: 0;    /* Removes any default padding */
+            box-sizing: border-box; /* Ensures padding/borders are included in the width/height calculation */
+        }
+
+        body{
+            display: inline;
+            justify-content: center;
+            align-items: center;
+            background-color: #02022a;
+            color: aliceblue;
+            font-family: 'Sdroboticsdemo', sans-serif;
+            font-size: 16px;
+        }
+        .main-container {
+            max-width: 1980px; /* Limits width for large screens */
+            margin: 0 auto;    /* Centers the container */
+            display: flex;     /* Use flex for flexible layouts */
+            flex-wrap: wrap;
+            flex-direction: column; /* Stack child elements vertically */
+            box-sizing: border-box; /* Includes padding and borders in width/height */
+        }
+        .sub-container{
+            display: inline-block;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            justify-content: center;
+            place-items: center;
+            
+        }
+        h1,h2{
+            text-align: center;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            width: 50%;
+        }
+        li {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 24px;
+            margin: 15px 0;
+            padding: 10px 20px;
+            background-color: #081e43;
+            color: #f4f4f4;
+            border: 2px solid aqua;
+            border-radius: 10px;
+        }
+        li i {
+            margin-right: 15px;
+        }
+        h2 {
+            font-family: "Iceland", serif;
+            font-weight: 200;
+            font-size: 55px;
+            color: aqua;
+            text-shadow: 0 0 10px aqua;
+            margin-bottom: 20px;
+        }
+        progress {
+            appearance: none;
+            width: 60%;
+            height: 20px;
+        }
+        progress::-webkit-progress-bar {
+            background-color: #f4f4f4;
+            border-radius: 5px;
+        }
+        progress::-webkit-progress-value {
+            background-color: aqua;
+            border-radius: 4px;
+        }
+        @media (max-width: 768px) {
+            progress {
+                width: 70%;
+            }
+            li {
+                font-size: 18px;
+                padding: 10px;
+            }
+            div > h2 {
+                font-size: 40px;
+            }
+        }
+        @font-face {
+            font-family: 'Sdroboticsdemo';
+            src: url('font/Sdroboticsdemo-X3led.ttf') format('truetype');
+        }
+        .portFolio {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            color: #a9cb11;
+            font-family: "Bungee Shade", serif;
+            font-optical-sizing: auto;
+            font-weight: 18px;
+            font-size: 25px;
+            font-style: normal;
+        }
+        .con-1 {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+        }
+        .flex {
+            display: flex;
+            flex-direction: row;
+        }
+        .banner-1{
+            display: flex;
+            flex-direction: row;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        div #navbar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            text-wrap: nowrap;
+            background-color: #02022a;
+        }
+        div #navbar a {
+            color: #f4f4f4;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 75px;
+            font-size: 22px;
+            text-wrap: nowrap;
+            transition: color 0.3s ease;
+        }
+        div #navbar a:hover {
+            color: #00d4ff;
+        }
+        .con-1,.con-2,.con-3,.con-4{
+            margin-bottom: 50px;
+        }
+        .con-2 {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            margin-top: 20px;
+            max-width: 1980px;
+        }
+        .con-2-aboutUs{
+            display: flex;
+            flex-direction: column;
+            margin-top: 50px;
+        }
+        .con-2 .banner{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            place-items: center;
+            color: #fff;
+            padding: 80px 40px;
+            border: 2px solid #ffd500;
+            box-shadow: 10px 10px  rgba(18, 173, 235, 0.786);
+        }
+        #aboutUs h2{
+            font-size: 60px;
+            text-wrap: wrap;
+        }
+        #aboutUs p{
+            font-size: 25px;
+        }
+        .about-work{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            place-items: center;
+            width: 1200px;
+        }
+        .about-card {
+            font-size: 20px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            text-wrap: wrap;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex: 1 1 150px;
+            width: 530px;
+            height: 140px;
+            border-radius: 15px;
+            margin: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 16px rgba(18, 173, 235, 0.786);
+        }
+        .con-3 {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+        .con-3 h2{
+            font-family: 'Vast Shadow', sans-serif;
+            font-size: 36px;
+            color: #00d4ff;
+        }
+        .con-4{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        /* Projects Section */
+
+        #projectSection h2 {
+            font-family: 'Vast Shadow', sans-serif;
+            font-size: 36px;
+            color: #00d4ff;
+            margin-bottom: 40px;
+        }
+        #projectSection .project-cards {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        #projectSection .project-card {
+            background-color: #D39D55;
+            padding: 20px;
+            width: 300px;
+            height: 200px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.5s ease, box-shadow 0.3s ease;
+        }
+        #projectSection .project-card:hover {
+            transform: translateY(-10px);
+            color: #23ad13;
+            background-color: #F5EFFF;
+            box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        #projectSection .project-card h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .con-5 {
+            padding-top: 75px;
+        }
+        .contact-section h2{
+            text-shadow: none;
+        }
+        .con-6 {
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .horizontal{
+            width: 118%;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+        }
+        /* Contact Section */
+        .contact-section {
+            /* background-image: url(top-view-blue-monday-concept-composition-with-telephone.jpg);
+            background-repeat: no-repeat; */
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #9370DB;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        .contact-section h2 {
+            font-family: 'Vast Shadow', sans-serif;
+            text-align: center;
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        .contact-section .details {
+            font-size: 18px;
+            color: #02022a;
+            text-align: center;
+            line-height: 2;
+            margin-bottom: 15px;
+        }
+        
+        .contact-section .details a {
+            color: #00d4ff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .contact-section .details a:hover {
+            color: #ff8c00;
+        }
+        spline-viewer{
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: -1;
+            width: auto;
+            height: auto;
+        }
+        .social-media-icons {
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .social-media-icons a {
+            margin: 0 15px;
+            color: #333;
+            font-size: 30px;
+            text-decoration: none;
+        }
+
+        .social-media-icons a:hover {
+            color: #0073b1; /* LinkedIn blue color or choose any color you like */
+        }
+        .banner {
+            justify-content: flex-start;
+            align-items: flex-start;
+            text-align: center;
+            place-items: center;
+        }
+        .banner .h2-text{
+            text-align: center;
+            font-size: 35px;
+        }
+        .banner h1 {
+            font-family: 'Audiowide', sans-serif;
+            text-wrap: nowrap;
+            font-size: 50px;
+            margin-bottom: 20px;
+            color: #FFF574;
+            transition: text-shadow 0.5s;
+            text-shadow: 0 0 5px #462398, 0 0 15px #00d4ff,0 0 20px #00d4ff,0 0 40px #00d4ff,0 0 60px #02022a, 0 0 10px #a9cb11;
+            animation: sec 4s infinite;
+        }
+        @keyframes sec{
+            0%{
+                text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+
+            }
+            50%{
+                text-shadow: 0 0 5px #462398, 0 0 15px #00d4ff,0 0 20px #00d4ff,0 0 40px #00d4ff,0 0 60px #02022a, 0 0 10px #a9cb11;
+            }
+            100%{
+                text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+            }
+        }
+        .banner p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            font-family: "Orbitron", serif;  
+            font-optical-sizing: auto;  
+            font-weight: 200;  
+            font-style: normal;
+            font-size: 20px;
+        }
+        .banner a{
+            padding: 12px 30px;
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            transition: background-color 0.5s ease-in-out;
+        }
+        .banner a:hover {
+            background-color: #ff8c00;
+        }
+        .padd {
+            padding-top: 75px;
+        }
+        #contact-form p{
+            color: #02022a;
+        }
+        #contact-form label {
+            display: block;
+            font-size: 16px;
+            color: #333;
+            text-align: left;
+            font-size: 20px;
+        }
+        #contact-form textarea {
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        #contact-form input,#contact-container textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        #contact-form input:focus,#contact-form textarea:focus {
+            border-color: #007bff;
+            outline: none;
+            transition: 0.5s;
+        }
+        #contact-form button {
+            font-family: "Varela Round",serif;
+            width: 50%;
+            padding: 12px;
+            font-size: 25px;
+            color: white;
+            background-color: #007b;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: transform 0.5s,background-color 0.5s,backdrop-filter 0.5s,box-shadow 0.7s;
+        }
+        #contact-form button:hover {
+            background-color: #ff01b3;
+            transform: scaleX(1.05);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 10px #02022a; /* Adds a glowing pink shadow */
+        }
+        .popup-image {
+            position: absolute;
+            width: 500px;
+            height: 300px;
+            visibility: hidden;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow:  0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.5s ease-in-out;
+        }
+        .popup-image:hover{
+            transform: scale(1.05);
+        }
+        .popup-image img {
+            width: 100%;
+            height: 100%;
+            background-color: #0073b1;
+            justify-content: center;
+            align-items: center;
+        }
+        .project-card:hover .popup-image{
+            visibility: visible;
+        }
+        .content-align {
+            display: flex;
+            place-items: center;
+            flex-direction: column;
+            width: 400px;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+        .about-card > div > h3 {
+            padding-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
-    <!-- Hero Section -->
-    <header class="hero-section">
-        <div class="container">
-            <h1>Hello, I'm <span>Pavithran Murugan</span></h1>
-            <p><span>Full Stack Developer | Problem Solver | Creative Coder</span></p>
-            <a href="#projects" class="btn">See My Work</a>
-        </div>
-    </header>
-
-    <!-- About Section -->
-    <section id="about" class="about-section">
-        <h2>About Me</h2>
-        <p>I'm a passionate Full Stack Developer specializing in Python, MySQL, HTML, CSS, and JavaScript. My goal is to build responsive, user-friendly applications that solve real-world problems.</p>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects-section">
-        <h2>My Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <h3>Retail Billing App</h3>
-                <p>A GUI-based billing system using Python and Tkinter integrated with MySQL.</p>
-                <button class="btn">Details</button>
-            </div>
-            <div class="project-card">
-                <h3>Portfolio Website</h3>
-                <p>A creative portfolio showcasing skills and projects using modern web design.</p>
-                <button class="btn">Details</button>
+    <div class="main-container">
+        <div class="con-1 banner-1 padd" id="navbar">
+            <div class="flex">
+                <div href="#" class="portFolio">PortFolio</div>
+                <a href="#">Home</a>
+                <a href="#aboutUs">About</a>
+                <a href="#skillSection">Skills</a>
+                <a href="#projectSection">Projects</a>
+                <a href="#contact">Contact</a>
             </div>
         </div>
-    </section>
+        <div class="sub-container">
+            <div class="con-2">
+                <div class="banner">
+                    <!-- Name -->
+                    <h1>Hi, I'm Pavithran Murugan</h1>
+                    <h2 class="h2-text">Full Stack Developer | Python Enthusiastic  </h2>
+                    <!-- Icons -->
+                    <div class="social-media-icons">
+                        <a href="https://www.linkedin.com/in/pavithranmurugan" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/pavithranmurugan" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://twitter.com/pavithranmurugan" target="_blank">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.instagram.com/pavithranmurugan" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="con-2-aboutUs padd" id="aboutUs">
+                    <div style="display: flex;flex-direction:row;justify-content: center;align-items: center;text-align: center;">
+                        <div style="display: flex;flex-direction: column;flex: 1;max-width: 750px">
+                            <h2>About Me</h2>
+                            <p>
+                                Hello! I am Pavithran Murugan, a passionate Full Stack Developer with expertise in Python, MySQL, HTML, CSS, and JavaScript. 
+                                I have worked on various web development and software projects, including a Retail Billing Application and a Web Development Application. 
+                                Currently, I am learning and developing my skills in Full Stack Development.
+                            </p>
+                            <p>
+                                I'm always eager to learn new technologies and contribute to innovative projects. Feel free to explore my work and connect with me!
+                            </p>
+                        </div>
+                        <div style="display: flex;flex-direction: column;justify-content: center;align-items: center;">
+                            <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.57/build/spline-viewer.js"></script>
+                            <spline-viewer url="https://prod.spline.design/7UinniVBHov4B7BS/scene.splinecode"></spline-viewer>
+                        </div>
+                    </div>
+                    <h2 style="margin: 50px;justify-content: flex-start;align-items: flex-start;display: flex;">What I'm doing</h2>
+                    <div class="about-work">
+                        <div class="about-card">
+                            <img src="freepik__background__64039.png" alt="web-design logo" style="width: 10%;">
+                            <div class="content-align">
+                                <h3>Web Designer</h3>
+                                <h5>Crafted with the most modern and high-quality standards, delivering professional-level results.</h5>
+                            </div>
+                        </div>
+                        <div class="about-card">
+                            <img src="py.png" alt="web-design logo" style="width: 15%;">
+                            <div class="content-align">
+                                <h3>Python Developer</h3>
+                                <h5>The most modern and High-quality design and made at professional level.</h5>
+                            </div>
+                        </div>
+                        <div class="about-card">
+                            <img src="web-development.png" alt="web-design logo" style="width: 10%;">
+                            <div class="content-align">
+                                <h3>Web development</h3>
+                                <h5>The most modern and High-quality design and made at professional level.</h5>
+                            </div>
+                        </div>
+                        <div class="about-card">
+                            <img src="Software Developer.png" alt="web-design logo" style="width: 15%;">
+                            <div class="content-align">
+                                <h3>software Developer</h3>
+                                <h5>Delivering cutting-edge, high-quality solutions crafted to professional standards.</h5>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="con-3 padd top" id="skillSection">
+                <h2>SKILLS</h2>
+                <ul>
+                    <li><i class="fa-brands fa-python"></i>Python <progress value="85" max="100" aria-label="Python proficiency 85%"></progress></li>
+                    <li><i class="fa-brands fa-html5"></i>HTML <progress value="85" max="100" aria-label="HTML proficiency 85%"></progress></li>
+                    <li><i class="fa-brands fa-css3-alt"></i>CSS <progress value="80" max="100" aria-label="CSS proficiency 80%"></progress></li>
+                    <li><i class="fa-brands fa-js"></i>JavaScript <progress value="70" max="100" aria-label="JavaScript proficiency 70%"></progress></li>
+                    <li><i class="fa-brands fa-database"></i>MySQL <progress value="75" max="100" aria-label="MySQL proficiency 75%"></progress></li>
+                </ul>
+                <script>
+                    // Animate progress bars
+                    document.querySelectorAll('progress').forEach(progress => {
+                        let value = progress.value;
+                        progress.value = 0;
+                        let interval = setInterval(() => {
+                            if (progress.value < value) {
+                                progress.value += 1;
+                            } else {
+                                clearInterval(interval);
+                            }
+                        }, 20); // Adjust the speed of animation
+                    });
+                </script>
+            </div>
+            <div class="con-4 padd top" id="projectSection">
+                <h2>PROJECTS</h2>
+                <div class="project-cards">
+                    <div class="project-card">
+                        <div class="popup-image">
+                            <img src="projectHover-1.png" alt="">
+                        </div>
+                        <div id="project-container"></div>
+                        <h3>Retail Billing Application</h3>
+                        <p class="text">A desktop application built using Python and Tkinter to manage retail billing with features like product search, billing, and database integration.</p>
+                        <a href="#">View Project</a>
+                    </div>
+                    <div class="project-card">
+                        <div class="popup-image">
+                            <img src="projectHover-1.png" alt="">
+                        </div>
+                        <h3>Web Development Portfolio</h3>
+                        <p class="text">My personal portfolio website built with HTML, CSS, and JavaScript to showcase my web development projects and skills.</p>
+                        <a href="#">View Project</a>
+                    </div>
+                    <div class="project-card">
+                        <div class="popup-image">
+                            <img src="projectHover-1.png" alt="">
+                        </div>
+                        <div>
+                            <h3>Custom Billing System</h3>
+                            <p class="text">A web-based billing system using Python (Flask), HTML, CSS, and MySQL to generate invoices and manage client data.</p>
+                            <a href="#">View Project</a>
+                        </div>
+                    </div>
+                    <!-- script to display -->
+                    <!-- <script> 
+                        let projectCardDiv = document.createElement('div');
+                        projectCardDiv.innerHTML = "<div>Retail Billing App</div>";
+                        projectCardDiv.style.width = "100%";
+                        projectCardDiv.style.color = "black";
+                        projectCardDiv.style.padding = "10px";
+                        projectCardDiv.style.border = "1px solid #ccc";
+                        projectCardDiv.style.borderRadius = "5px";
+                        projectCardDiv.style.transition = "background-color 0.3s, color 0.3s";
+                        function displayHover(event) {
+                                if (event.type === "mouseover") {
+                                    projectCardDiv.style.backgroundColor = "#f0f0f0";
+                                    projectCardDiv.style.color = "#007BFF";
+                                } else if (event.type === "mouseout") {
+                                    projectCardDiv.style.backgroundColor = "";
+                                    projectCardDiv.style.color = "black";
+                                }
+                        }
+                        projectCardDiv.addEventListener("mouseover",displayHover);
+                                projectCardDiv.addEventListener("mouseout",displayHover);
+                                document.getElementById('project-container').appendChild(projectCardDiv);
+                    </script> -->
+                </div>
+            </div>
+            <div class="con-5" id="contact">
+                <div class="contact-section top">
+                    <h2>CONTACT ME</h2>
+                    <div class="details">
+                        <p>If you have any questions or would like to get in touch with me, feel free to reach out!</p>
+                        <!-- <p>Email: <a href="mailto:pavithranmurugan.official@gmail.com">pavithranmurugan.official@gmail.com</a></p>
+                        <p>Phone: <a href="tel:+91 7904536593">+91 7904536593</a></p>
+                        <p>LinkedIn: <a href="https://www.linkedin.com/in/pavithranmurugan" target="_blank">linkedin.com/in/pavithranmurugan-in</a></p> -->
+                        <div id="contact-form">
+                            <label for="name">Name</label>
+                            <input type="text" name="" id="name">
+                        </div>
+                        <div id="contact-form">
+                            <label for="mobile">Mobile</label>
+                            <input type="text" name="mobile" id="mobile">
+                        </div>
+                        <div id="contact-form">
+                            <label for="Email">Email</label>
+                            <input type="text" name="email" id="email">
+                        </div>
+                        <div id="contact-form">
+                            <label for="message">Message</label>
+                            <textarea name="message" id="message" placeholder="Your Message" required></textarea>
+                        </div>
+                        <div id="contact-form">
+                            <button type="submit" id="button" onclick="popup_message()">Submit</button>
+                            <script>
+                                function popup_message(){
+                                    let name = document.getElementById("name").value
+                                    let email = document.getElementById("email").value
+                                    let mobile = document.getElementById("mobile").value
+                                    if (name.trim() && email.trim() && mobile.trim()) {
+                                        let popup = document.createElement('div')
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <h2>Contact Me</h2>
-        <form action="submit_form.php" method="post">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-            <button type="submit" class="btn">Send Message</button>
-        </form>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2024 Pavithran Murugan. All rights reserved.</p>
-    </footer>
+                                        popup.innerHTML = `<p>Name : ${name}</p>
+                                                        <p>Mobile : ${mobile}</p>
+                                                        <p>Email : ${email}</p>`;
+                                        
+                                        popup.style.position = "fixed";
+                                        popup.style.width = "300px"
+                                        popup.style.color = "black"
+                                        popup.style.top = "50%";
+                                        popup.style.left = "50%";
+                                        popup.style.transform = "translate(-50%,-50%)";
+                                        popup.style.backgroundColor = "#fff";
+                                        popup.style.padding = "20px";
+                                        popup.style.boxShadow = "0 4px 8px rgba(0,0,0,0.2)";
+                                        popup.style.borderRadius = "8px";
+                                        popup.style.zIndex = "1000"
+                                        document.body.appendChild(popup);
+                                        
+                                        setTimeout(()=>{
+                                            document.body.removeChild(popup);
+                                        },3000);
+                                    }else{
+                                        alert("Please fill in all the fields")
+                                    }
+                                }
+                            </script>
+                        </div>
+                
+                    </div>
+                </div>
+            </div>
+            <hr class="horizontal">
+            <div class="con-6" id="footerSection">
+                <p>&copy; 2025 Pavithran Murugan. All rights reserved.</p>     
+            </div>
+        </div>
+    </div>
 </body>
 </html>
