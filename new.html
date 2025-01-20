@@ -197,6 +197,28 @@
         #aboutUs p{
             font-size: 25px;
         }
+        .about-work{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            place-items: center;
+            width: 1200px;
+        }
+        .about-card {
+            font-size: 20px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            text-wrap: wrap;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex: 1 1 150px;
+            width: 530px;
+            height: 140px;
+            border-radius: 15px;
+            margin: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 16px rgba(18, 173, 235, 0.786);
+        }
         .con-3 {
             display: flex;
             flex-wrap: wrap;
@@ -271,13 +293,13 @@
         }
         /* Contact Section */
         .contact-section {
-            background-image: url(top-view-blue-monday-concept-composition-with-telephone.jpg);
-            background-repeat: no-repeat;
+            /* background-image: url(top-view-blue-monday-concept-composition-with-telephone.jpg);
+            background-repeat: no-repeat; */
             width: 100%;
-            max-width: 700px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 20px;
-            background-color: #f9f9f9;
+            background-color: #9370DB;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0,0, 0, 0.1);
             margin-bottom: 30px;
@@ -287,7 +309,7 @@
             text-align: center;
             font-size: 36px;
             color: #333;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
         .contact-section .details {
             font-size: 18px;
@@ -392,7 +414,6 @@
             display: block;
             font-size: 16px;
             color: #333;
-            margin-bottom: 5px;
             text-align: left;
             font-size: 20px;
         }
@@ -458,6 +479,19 @@
         .project-card:hover .popup-image{
             visibility: visible;
         }
+        .content-align {
+            display: flex;
+            place-items: center;
+            flex-direction: column;
+            width: 400px;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+        .about-card > div > h3 {
+            padding-bottom: 20px;
+        }
     </style>
 </head>
 <body>
@@ -510,6 +544,38 @@
                         <div style="display: flex;flex-direction: column;justify-content: center;align-items: center;">
                             <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.57/build/spline-viewer.js"></script>
                             <spline-viewer url="https://prod.spline.design/7UinniVBHov4B7BS/scene.splinecode"></spline-viewer>
+                        </div>
+                    </div>
+                    <h2 style="margin: 50px;justify-content: flex-start;align-items: flex-start;display: flex;">What I'm doing</h2>
+                    <div class="about-work">
+                        <div class="about-card">
+                            <img src="freepik__background__64039.png" alt="web-design logo" style="width: 10%;">
+                            <div class="content-align">
+                                <h3>Web Designer</h3>
+                                <h5>Crafted with the most modern and high-quality standards, delivering professional-level results.</h5>
+                            </div>
+                        </div>
+                        <div class="about-card">
+                            <img src="py.png" alt="web-design logo" style="width: 15%;">
+                            <div class="content-align">
+                                <h3>Python Developer</h3>
+                                <h5>The most modern and High-quality design and made at professional level.</h5>
+                            </div>
+                        </div>
+                        <div class="about-card">
+                            <img src="web-development.png" alt="web-design logo" style="width: 10%;">
+                            <div class="content-align">
+                                <h3>Web development</h3>
+                                <h5>The most modern and High-quality design and made at professional level.</h5>
+                            </div>
+                        </div>
+                        <div class="about-card">
+                            <img src="Software Developer.png" alt="web-design logo" style="width: 15%;">
+                            <div class="content-align">
+                                <h3>software Developer</h3>
+                                <h5>Delivering cutting-edge, high-quality solutions crafted to professional standards.</h5>
+                            </div>
+                            
                         </div>
                     </div>
                 </div>
